@@ -42,10 +42,19 @@ namespace Fleet_Lab2
                                .OrderBy(car => car.Registration)
                                .Select(car => car.Model);
 
-            foreach (String c in output2)
+            if (output2.Count() == 0)
             {
-                Console.WriteLine("\n" + c.ToString());
+                Console.WriteLine("\nRecord not found!");
             }
+            else 
+            {
+                foreach (String c in output2)
+                {
+                    Console.WriteLine("\n" + c.ToString());
+                }
+            }
+
+           
 
 
             Console.WriteLine();
